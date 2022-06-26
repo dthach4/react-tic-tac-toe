@@ -29,6 +29,9 @@ that's all you can do for now.
 
 You need [npm](https://www.npmjs.com/) to run this project.
 
+A demo of this project can be found at
+[https://dthach4.github.io/react-tic-tac-toe/](https://dthach4.github.io/react-tic-tac-toe/).
+
 ### Run server in development mode
 
 ```
