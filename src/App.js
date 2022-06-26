@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import Game from './ui/sections/Game';
+import GameState from './models/GameState';
 import './App.css';
 
 function App() {
+
+  const [state, setState] = useState(new GameState({}));
+  
+  useEffect(() => {
+    setState(state => state
+      .withCurrentState('game')
+      .withPlayers([
+        { name: 'Player O' },
+        { name: 'Player X' },
+      ])
+      .withTurnPlayer(Math.floor(Math.random()*2))
+      .withBoard([null, null, null, null, null, null, null, null, null])
+    );
+  }, []);
+
+  useEffect(() => {
+    if('over' === state.currentState) {
+      console.log('Game over!');
+    }
+  }, [state]);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Game state={state} setState={setState} />
     </div>
   );
 }

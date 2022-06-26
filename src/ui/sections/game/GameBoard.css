@@ -1,0 +1,35 @@
+.GameBoard {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 640px;
+  max-width: 100%;
+  margin-top: 2rem;
+  border: 1px solid #eee;
+}
+
+.GameBoard__Box {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  flex-basis: 33.333333%;
+  width: 33.333333%;
+  height: 0;
+  padding-bottom: 33.333333%;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+
+.GameBoard__Box:hover {
+  background-color: #222;
+}
+
+.GameBoard__Box.GameBoard__Box--Player1{
+  background-image: url(../../../imgs/circle-regular.svg);
+}
+
+.GameBoard__Box.GameBoard__Box--Player2{
+  background-image: url(../../../imgs/xmark-solid.svg);
+}

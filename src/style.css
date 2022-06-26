@@ -1,0 +1,10 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+:root {
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
