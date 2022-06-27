@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-tic-tac-toe/static/css/main.0580bf31.css",
-    "main.js": "/react-tic-tac-toe/static/js/main.fa0d8493.js",
+    "main.css": "/react-tic-tac-toe/static/css/main.31fa9128.css",
+    "main.js": "/react-tic-tac-toe/static/js/main.e881cf1c.js",
     "index.html": "/react-tic-tac-toe/index.html",
     "static/media/xmark-solid.svg": "/react-tic-tac-toe/static/media/xmark-solid.410e70c0ec466fd518df.svg",
     "static/media/circle-regular.svg": "/react-tic-tac-toe/static/media/circle-regular.53fcf320e9ab74d7287a.svg",
-    "main.0580bf31.css.map": "/react-tic-tac-toe/static/css/main.0580bf31.css.map",
-    "main.fa0d8493.js.map": "/react-tic-tac-toe/static/js/main.fa0d8493.js.map"
+    "main.31fa9128.css.map": "/react-tic-tac-toe/static/css/main.31fa9128.css.map",
+    "main.e881cf1c.js.map": "/react-tic-tac-toe/static/js/main.e881cf1c.js.map"
   },
   "entrypoints": [
-    "static/css/main.0580bf31.css",
-    "static/js/main.fa0d8493.js"
+    "static/css/main.31fa9128.css",
+    "static/js/main.e881cf1c.js"
   ]
 }
