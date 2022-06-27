@@ -10,17 +10,25 @@ export default function GameBoard({ state, setState }) {
       if(!state.turnPlayer.isHuman) {
         return;
       }
+      if(null !== state.board[idx]) {
+        return;
+      }
       setState(state => state.withMovePlayed(idx));
     };
   };
+  const winner = state.getWinner();
   const gameBoardBoxes = Array(9).fill(0).map((_, idx) => {
+    let classes = ['GameBoard__Box'];
     if(0 === state.board[idx]) {
-      return <div key={idx} className="GameBoard__Box GameBoard__Box--Player1"></div>;
+      classes.push('GameBoard__Box--Player1');
     }
     if(1 === state.board[idx]) {
-      return <div key={idx} className="GameBoard__Box GameBoard__Box--Player2"></div>;
+      classes.push('GameBoard__Box--Player2');
     }
-    return <div key={idx} className="GameBoard__Box" onClick={playMove(idx)}></div>;
+    if(null !== winner && winner.squares.indexOf(idx) >= 0) {
+      classes.push('GameBoard__Box--WinnerSquare');
+    }
+    return <div key={idx} className={classes.join(' ')} onClick={playMove(idx)}></div>;
   });
   return (
     <div className="GameBoard">
