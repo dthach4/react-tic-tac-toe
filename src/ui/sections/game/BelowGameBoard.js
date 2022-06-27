@@ -18,13 +18,13 @@ export default function BelowGameBoard({ state, setState }) {
 
 function getMessage(state) {
   if('game' === state.currentState) {
-    return 'Player '+state.turnPlayer+'\'s turn';
+    return state.turnPlayer.name+'\'s turn';
   }
   if('over' === state.currentState) {
     if(null === state.getWinner()) {
       return 'Draw!';
     }
-    return 'Player '+state.getWinner().player+' won!';
+    return state.getWinner().player.name+' won!';
   }
   return '???';
 }

@@ -7,8 +7,9 @@ export default function GameBoard({ state, setState }) {
       if('game' !== state.currentState) {
         return;
       }
-      let board = [...state.board];
-      board[idx] = state.turnPlayer;
+      if(!state.turnPlayer.isHuman) {
+        return;
+      }
       setState(state => state.withMovePlayed(idx));
     };
   };
