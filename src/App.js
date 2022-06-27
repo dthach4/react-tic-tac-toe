@@ -18,12 +18,6 @@ function App() {
       .withBoard([null, null, null, null, null, null, null, null, null])
     );
   }, []);
-
-  useEffect(() => {
-    if('over' === state.currentState) {
-      console.log('Game over!');
-    }
-  }, [state]);
   
   return (
     <div className="App">
