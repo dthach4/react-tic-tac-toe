@@ -8,3 +8,9 @@
 * {
   box-sizing: border-box;
 }
+
+@media (max-width: 576px) {
+  :root {
+    font-size: 18px;
+  }
+}
