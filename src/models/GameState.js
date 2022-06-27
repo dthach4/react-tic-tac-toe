@@ -58,7 +58,7 @@ export default function GameState(args) {
       return [];
     }
     return this.board.map((val, idx) => val === null ? idx : null).filter(val => val !== null);
-  }
+  };
   const getWinner = function () {
     if(null !== this.board[0] && this.board[0] === this.board[1] && this.board[0] === this.board[2]) { return {player: this.players[board[0]], squares: [0, 1, 2]}; } // top row
     if(null !== this.board[3] && this.board[3] === this.board[4] && this.board[3] === this.board[5]) { return {player: this.players[board[3]], squares: [3, 4, 5]}; } // middle row
@@ -80,16 +80,16 @@ export default function GameState(args) {
       null !== this.board[6] &&
       null !== this.board[7] &&
       null !== this.board[8];
-  }
+  };
   const isOver = function () {
     return null !== this.getWinner() || this.isFull();
-  }
+  };
   const restart = function () {
     return this
       .withCurrentState('game')
       .withBoard(Array(9).fill(null))
       .withTurnPlayerIndex(Math.floor(Math.random()*2));
-  }
+  };
   return {
     currentState,
     players,

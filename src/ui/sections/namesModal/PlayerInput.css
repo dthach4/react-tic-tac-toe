@@ -1,0 +1,50 @@
+.PlayerInput {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.PlayerInput__Textbox,
+.PlayerInput__Select {
+  background-color: #111;
+  border: 1px solid #777;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.25em;
+  height: 2.25rem;
+}
+
+.PlayerInput__Textbox {
+  flex-grow: 1;
+  border-radius: 0.5rem 0 0 0.5rem;
+  border-right: 0;
+  padding-left: 2.25rem;
+}
+
+.PlayerInput__Select {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.PlayerInput__Leading {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat
+}
+
+.PlayerInput__Leading--Player1 {
+  background-image: url(../../../imgs/circle-regular.svg);
+}
+
+.PlayerInput__Leading--Player2 {
+  background-image: url(../../../imgs/xmark-solid.svg);
+}

@@ -1,5 +1,5 @@
 export default function HardComputerPlayer(args) {
-  const name = args.name ?? 'Computer';
+  const name = args.name.length < 1 ? 'Hard AI' : args.name;
   const isHuman = false;
   const nextMove = function (gameState) {
     if(this !== gameState.turnPlayer) {

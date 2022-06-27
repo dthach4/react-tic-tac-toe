@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Game from './ui/sections/Game';
+import NamesModal from './ui/sections/NamesModal';
 import GameState from './models/GameState';
 import HardComputerPlayer from './models/player/HardComputerPlayer';
 import HumanPlayer from './models/player/HumanPlayer';
@@ -11,7 +12,7 @@ function App() {
   
   useEffect(() => {
     setState(state => state
-      .withCurrentState('game')
+      .withCurrentState('names')
       .withPlayers([
         new HumanPlayer({name: 'Player O'}),
         new HardComputerPlayer({name: 'Player X'}),
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className="App">
       <Game state={state} setState={setState} />
+      <NamesModal state={state} setState={setState} />
     </div>
   );
 }

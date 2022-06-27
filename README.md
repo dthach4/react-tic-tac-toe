@@ -22,8 +22,8 @@ game. If the grid is full and neither player manages to win, the game is a draw.
 
 ## Features
 
-You can play Tic-Tac-Toe against an AI that cannot lose. That's it, that's all
-you can do for now.
+You can play Tic-Tac-Toe against an AI or against a friend locally. You can even
+choose to watch 2 AIs play against each other!
 
 ## Running the project
 

@@ -1,22 +1,16 @@
 .BelowGameBoard {
   margin-top: 2rem;
   font-size: 1rem;
+  text-align: center;
 }
 
-.BelowGameBoard button {
+.BelowGameBoard__ButtonsBar {
   display: block;
   margin: 1rem auto;
-  padding: 1em 2em;
-  font-size: 0.75rem;
-  line-height: 1em;
-  text-transform: uppercase;
-  border-radius: 0.25rem;
-  border: 0;
-  background-color: #fff;
-  color: #111;
-  cursor: pointer;
 }
 
-.BelowGameBoard button:hover {
-  background-color: #ddd;
+.BelowGameBoard__ButtonsBar button {
+  display: inline-block;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
