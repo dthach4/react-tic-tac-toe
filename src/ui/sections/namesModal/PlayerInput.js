@@ -8,6 +8,7 @@ export default function PlayerInput({ playerNumber, label, defaultPlayer }) {
       <div className={ "PlayerInput__Leading PlayerInput__Leading--Player"+playerNumber } />
       <select className="PlayerInput__Select" name={"type"+playerNumber}>
         <option value="human">Human</option>
+        <option value="easy-ai">Easy AI</option>
         <option value="hard-ai">Hard AI</option>
       </select>
     </div>
