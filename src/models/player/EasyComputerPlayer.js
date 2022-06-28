@@ -29,8 +29,6 @@ export default function EasyComputerPlayer(args) {
     return 0;
   };
   const canOpponentWinImmediately = function (gameState) {
-    const validMoves = gameState.getValidMoves();
-    const validMovesThatWin = validMoves.filter(move => null !== gameState.withMovePlayed(move).getWinner());
     const validMovesWithWinningOpponent = gameState.getValidMoves().filter(move => null !== gameState.withMovePlayed(move).getWinner());
     return validMovesWithWinningOpponent.length > 0;
   }
